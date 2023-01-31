@@ -1,45 +1,39 @@
 import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
 import CardList from '../components/CardList';
 import Scroll from '../components/Scroll';
 import SearchBox from '../components/SearchBox';
 import ErrorBoundry from '../components/ErrorBoundry';
+
 import './App.css';
+import { requestRobots, setSearchField } from '../store/actions';
 
 function App() {
-    const [robots, setRobots] = useState([]);
-    const [searchTitle, setSearchTitle] = useState('');
-    const [loading, setLoading] = useState(false);
+    const state = useSelector((state) => state);
+    const {
+        requestRobotsReducer: { pending, data },
+        searchRobotsReducer: { searchField },
+    } = state;
 
-    const fetchRobots = async () => {
-        setLoading(true);
-        try {
-            const robotsData = await fetch(
-                'https://jsonplaceholder.typicode.com/users'
-            );
-            const response = await robotsData.json();
-            setRobots(response);
-            setLoading(false);
-        } catch (error) {
-            setLoading(false);
-            console.error(error);
-        }
-    };
+    const dispatch = useDispatch();
 
     useEffect(() => {
-        fetchRobots();
+        requestRobots(dispatch);
     }, []);
 
-    const onSearchTitle = (name) => {
-        setSearchTitle(name);
+    const onSearchField = (name) => {
+        dispatch(setSearchField(name));
     };
 
-    const filteredRobots = robots.filter((robot) => {
-        return robot.name
-            .toLowerCase()
-            .includes(searchTitle.toLocaleLowerCase());
+    const filteredRobots = data.filter((robot) => {
+        return (
+            robot &&
+            robot.name.toLowerCase().includes(searchField.toLocaleLowerCase())
+        );
     });
 
-    if (loading) {
+    if (pending) {
         return (
             <div className='tc'>
                 <h1 className='f2'>Robots app</h1>
@@ -52,8 +46,8 @@ function App() {
         <div className='tc'>
             <h1 className='f2'>Robots app</h1>
             <SearchBox
-                searchTitle={searchTitle}
-                onSearchTitle={onSearchTitle}
+                searchField={searchField}
+                onSearchField={onSearchField}
             />
             <Scroll>
                 <ErrorBoundry>

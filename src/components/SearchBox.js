@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function SearchBox({ onSearchTitle, searchTitle }) {
+export default function SearchBox({ onSearchField, searchField }) {
     const searchEvent = (event) => {
         event.preventDefault();
-        onSearchTitle(event.target.value);
+        onSearchField(event.target.value);
     };
 
     return (
@@ -12,7 +12,7 @@ export default function SearchBox({ onSearchTitle, searchTitle }) {
                 className='pa3 ba b--green bg-lightest-blue'
                 placeholder='Search robots by their name'
                 onChange={searchEvent}
-                defaultValue={searchTitle}
+                defaultValue={searchField}
                 type='search'
             />
         </div>
