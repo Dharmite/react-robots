@@ -1,16 +1,16 @@
 {
-  "main.css": "/react-robots/static/css/main.7110d535.chunk.css",
-  "main.js": "/react-robots/static/js/main.c800a685.chunk.js",
-  "main.js.map": "/react-robots/static/js/main.c800a685.chunk.js.map",
-  "static/js/1.3a79397a.chunk.js": "/react-robots/static/js/1.3a79397a.chunk.js",
-  "static/js/1.3a79397a.chunk.js.map": "/react-robots/static/js/1.3a79397a.chunk.js.map",
-  "static/js/2.4fded2ef.chunk.js": "/react-robots/static/js/2.4fded2ef.chunk.js",
-  "static/js/2.4fded2ef.chunk.js.map": "/react-robots/static/js/2.4fded2ef.chunk.js.map",
-  "runtime~main.js": "/react-robots/static/js/runtime~main.7d49aa6d.js",
-  "runtime~main.js.map": "/react-robots/static/js/runtime~main.7d49aa6d.js.map",
-  "static/media/App.css": "/react-robots/static/media/SEGA.12a3db8b.woff",
-  "static/css/main.7110d535.chunk.css.map": "/react-robots/static/css/main.7110d535.chunk.css.map",
-  "index.html": "/react-robots/index.html",
-  "precache-manifest.82fe6248204da64bd21c61bf26040417.js": "/react-robots/precache-manifest.82fe6248204da64bd21c61bf26040417.js",
-  "service-worker.js": "/react-robots/service-worker.js"
+  "files": {
+    "main.css": "/react-movies-tv-shows-rating/static/css/main.a095e38c.css",
+    "main.js": "/react-movies-tv-shows-rating/static/js/main.0173bed9.js",
+    "static/js/453.c97e7a89.chunk.js": "/react-movies-tv-shows-rating/static/js/453.c97e7a89.chunk.js",
+    "static/media/SEGA.woff": "/react-movies-tv-shows-rating/static/media/SEGA.47b4bfa94ef243af4a5b.woff",
+    "index.html": "/react-movies-tv-shows-rating/index.html",
+    "main.a095e38c.css.map": "/react-movies-tv-shows-rating/static/css/main.a095e38c.css.map",
+    "main.0173bed9.js.map": "/react-movies-tv-shows-rating/static/js/main.0173bed9.js.map",
+    "453.c97e7a89.chunk.js.map": "/react-movies-tv-shows-rating/static/js/453.c97e7a89.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a095e38c.css",
+    "static/js/main.0173bed9.js"
+  ]
 }
